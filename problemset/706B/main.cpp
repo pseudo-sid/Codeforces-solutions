@@ -1,3 +1,5 @@
+//Wrong answer
+
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
@@ -5,6 +7,9 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     /* code */
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int n;  cin >> n;
     vector<pair<int, int> > prices;
     prices.reserve(n);  int x;
@@ -25,12 +30,29 @@ int main(int argc, char const *argv[])
 
     sort(prices.begin(), prices.end());
     for(int i = 0; i < q; i++){
-        int balance = coins[i].first;
+        ll balance = coins[i].first;
         int s =0, e = n-1;
-        while(s <= e){
-            int mid = (s + e)/2;
-            
+        int ans;
+        if(balance < prices[0].first)
+            ans = -1;
+        else if (balance > prices[n-1].first)
+            ans = n;
+        else
+        {
+            while(s <= e){
+                ans = (s + e) / 2;
+                if(prices[ans].first > balance and prices[ans-1].first <= balance)
+                    {
+                        ans--;
+                        break;
+                    }
+                if(prices[ans].first < balance)
+                    s = ans+1;
+                else
+                    e = ans -1;
+            }
         }
+        cout << ans+1 << endl;
     }
 
     return 0;
