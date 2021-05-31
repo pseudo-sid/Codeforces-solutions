@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
     while(t--){
         int n;  cin >> n;
         for(int i = 0; i < n; i++)
-            cout << 500 + (rand() % 500) << " ";
+            cout << 501 + (rand() % 499) << " ";
         cout <<"\n";
     }
     return 0;
