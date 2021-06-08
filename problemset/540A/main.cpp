@@ -4,10 +4,10 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 	/* code */
-	#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-	#endif
+	// #ifndef ONLINE_JUDGE
+	// freopen("input.txt", "r", stdin);
+	// freopen("output.txt", "w", stdout);
+	// #endif
 	int n;	cin >> n;
 	string o;	cin >> o;	//original state
 	string c;	cin >> c;	//combination
