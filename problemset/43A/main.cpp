@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     cin >> s;
     string t;
     int x = 1, y = 0;
-    n--;
+    n--
     while(n--){
         cin >> t;
         if(t == s)
