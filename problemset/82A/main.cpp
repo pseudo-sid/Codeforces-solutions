@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 //adding a comment
 int main(int argc, char const *argv[])
